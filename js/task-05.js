@@ -4,8 +4,8 @@ const defaultTitleElText = titleEl.textContent
 
 inputEl.addEventListener('input', onInput)
 function onInput(evt){
-const inputText = (evt.currentTarget.value)
-    if (inputText.trim().length === 0) {
+const inputText = evt.currentTarget.value.trim()
+    if (inputText.length === 0) {
     titleEl.textContent = defaultTitleElText
     } else titleEl.textContent = inputText
 }
